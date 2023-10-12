@@ -5,11 +5,12 @@ import Siginin from "./Signin/Siginin";
 import Landing from "./Landing/Landing";
 
 
-const App: React.FC = () => {
+const App: React.FC = ( ) => {
   return (
-    <ContextProvider>
+    // <ContextProvider>
       <Routes>
-        <Route index element={<Siginin />} />
+        <Route index element={<Landing/>} />
+        {/* <Route index element={<Siginin />} />
         <Route path="/signin" element={<Siginin />} />
         <Route
           path="/dashboard"
@@ -18,10 +19,10 @@ const App: React.FC = () => {
               <Landing/>
             </Protected.ProtectedLanding>
           }
-        />
+        /> */}
         <Route path="*" element={`Error 404`}/>
       </Routes>
-    </ContextProvider>
+    // </ContextProvider>
   );
 };
 
